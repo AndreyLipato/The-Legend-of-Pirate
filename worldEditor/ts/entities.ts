@@ -35,18 +35,18 @@ createNewEntityClass_Auto("market", false, 39, 39, 1, 1, 0, 0, 1, 1, [
 ])
 createNewEntityClass_Auto("trigger", false, 50, 50, 1, 1, 0, 0, 1, 1, [
 	{ type: "area", name: "zone", value: [0, 0, 1, 1], displayColor: "orange", title: "Область активации" },
-	{ type: "text", name: "type", value: "travelToWorld", displayColor: "lime", options: ["travelToWorld", "dialog"], title: "Тип" },
+	{ type: "text", name: "type", value: "travelToWorld", displayColor: "green", options: ["travelToWorld", "dialog", "checkpoint"], title: "Тип" },
 	{ type: "text", name: "value", value: null, displayColor: "lime", nullable: true, smartTitle: {
 		field: "type",
-		titles: { "travelToWorld": "Id Мира", "dialog": "Id диалога" }
+		titles: { "travelToWorld": "Id Мира", "dialog": "Id диалога", "checkpoint": "Не используется" }
 	}},
 	{ type: "coords", name: "value2", value: null, displayColor: "lime", nullable: true, smartTitle: {
 		field: "type",
-		titles: { "travelToWorld": "Экран", "dialog": "Не используется" }
+		titles: { "travelToWorld": "Экран", "dialog": "Не используется", "checkpoint": "Не используется" }
 	}},
 	{ type: "tile", name: "value3", value: null, displayColor: "lime", nullable: true, smartTitle: {
 		field: "type",
-		titles: { "travelToWorld": "Место", "dialog": "Не используется" }
+		titles: { "travelToWorld": "Место", "dialog": "Не используется", "checkpoint": "Точка возрождения" }
 	}},
 ])
 createNewEntityClass_Auto("cactusDancing", true, 18, 24, 0.85, 0.85, -0.075, -0.475, 1, 1.33)
@@ -111,6 +111,13 @@ createNewEntityClass_Auto("octopus", true, 32, 32, 2, 2, undefined, undefined, u
 createNewEntityClass_Auto("spyglass", false, 11, 4, 0.6875, 0.25)
 createNewEntityClass_Auto("dig_place_hidden", false, 16, 16, 1, 1, undefined, undefined, undefined, undefined, [
 	{ type: "text", name: "content", value: "heart_add", options: ["heart_add"], title: "Содержимое" },
+])
+createNewEntityClass_Auto("pirate3", true, 11, 22, 0.75, 0.7, 0, -0.8, 0.75, 1.5, [
+	{ type: "textAria", name: "speech", value: "", title: "Речь" },
+	{ type: "number", name: "img", value: 1, options: [1, 2], title: "Изображение" },
+])
+createNewEntityClass_Auto("coinbag", null, 15, 12, 0.9375, 0.75, undefined, undefined, undefined, undefined, [
+	{ type: "number", name: "id", value: 1, options: [1, 2, 3], title: "Id", displayColor: "green" },
 ])
 
 
